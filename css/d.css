@@ -1,10 +1,57 @@
-body,html{height:100%;padding:0px;margin:0px;}
-.a{background-color:#00bcd4;}
-.b{background-color:red;}
-.c{background-color:#cddc39;display:block !important}
-.a,.b,.c{display:inline-block;width:33.33%;height:100%;float:left;}
-.d{background-color:pink;height:10%;width:100%;position:fixed;bottom:0px;}
-#nave{text-align:center;position:fixed;top:10%;width:100%;height:20%}
-#nave img{height:100%;}
-#cpanel{}
-#hidem,#showm{display:none}
+body,html{
+    height:100%;
+    padding:0px;
+    margin:0px;
+}
+#fondo{
+    height:100%;
+    width:100%;
+    position:fixed;
+    z-index: -3;
+}
+#fondo img{
+    height: 100%;
+    width: 100%;
+}
+
+
+.c{
+    
+    display:block !important
+}
+.a,.b,.c{
+    display:inline-block;
+    width:33.33%;
+    height:100%;
+    float:left;
+}
+.luna{
+    height:60%;
+    width:100%;
+    position:fixed;
+    bottom:0px;
+    left: 0px;
+    right:0px;
+    margin:0 auto;
+    z-index: -1;
+}
+.luna img{
+    width: 100%;
+    height: 100%;
+}
+#nave{
+    text-align:center;
+    position:fixed;
+    top:10%;
+    width:100%;
+    height:20%
+}
+#nave img{
+    height:100%;
+}
+#cpanel{
+    
+}
+#hidem,#showm{
+    display:none
+}
