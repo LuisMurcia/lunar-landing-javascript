@@ -25,6 +25,17 @@ body,html{
     height:100%;
     float:left;
 }
+#tierra{
+    height:60%;
+    width:20%;
+    position:fixed;
+    bottom:40px;
+    z-index: -2;
+}
+#tierra img{
+    width: 160%;
+    height: 115%;
+}
 .luna{
     height:60%;
     width:100%;
