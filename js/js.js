@@ -20,7 +20,21 @@ window.onload = function(){
 	velocidad = document.getElementById("velocidad");
 	altura = document.getElementById("altura");
 	combustible = document.getElementById("fuel");
-
+	
+	//Pausar el juego
+		document.getElementById("play").onclick=function(){
+			pause();
+			};
+	//Retomar el juego
+		document.getElementById("pause").onclick=function(){
+			play();
+		};
+	//Reiniciar el juego
+		document.getElementById("reset").onclick=function(){
+			reset();
+		};
+	
+	
 	
 	//definición de eventos
 	//mostrar menú móvil
@@ -34,13 +48,6 @@ window.onload = function(){
 		start();
 	}
 	//encender/apagar el motor al hacer click en la pantalla
-	document.onclick = function () {
- 	  if (a==g){
-  		motorOn();
- 	  } else {
-  		motorOff();
- 	  }
-	}
 	//encender/apagar al apretar/soltar una tecla
 	document.onkeydown = motorOn;
 	document.onkeyup = motorOff;
@@ -91,4 +98,25 @@ function actualizarFuel(){
 	c-=0.1;
 	if (c < 0 ) c = 0;
 	combustible.innerHTML=c;	
+}
+function pause(){
+	stop();	
+	document.getElementById("play").style.display = "none";
+	document.getElementById("pause").style.display = "inline-block";
+}
+function play(){
+	start();
+	document.getElementById("pause").style.display = "none";
+	document.getElementById("play").style.display = "inline-block";
+}
+function reset(){
+        stop();
+        y = 10;
+        v = 0;
+        c = 100;
+        a = g;
+        g = 1.622;
+        dt = 0.016683;
+        clearInterval(timer);
+        start();
 }

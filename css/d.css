@@ -4,6 +4,7 @@ body,html{
     margin:0px;
 }
 #fondo{
+    display: none;
     height:100%;
     width:100%;
     position:fixed;
@@ -27,6 +28,20 @@ body,html{
     z-index: 0;
 }
 #play img{
+    width: 130%;
+    height: 130%;
+}
+#pause{
+    display: none;
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    right: 0px;
+    margin-top: 30px;
+    margin-right: 60px;
+    z-index: 0;
+}
+#pause img{
     width: 130%;
     height: 130%;
 }
@@ -58,7 +73,7 @@ body,html{
     width: 130%;
     height: 130%;
 }
-.a,.b,.c{
+.a,.c{
     display:inline-block;
     width:33.33%;
     height:100%;
