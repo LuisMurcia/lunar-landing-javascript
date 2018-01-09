@@ -13,11 +13,50 @@ body,html{
     height: 100%;
     width: 100%;
 }
-
-
-.c{
-    
+.c{   
     display:block !important
+}
+#play{
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    right: 0px;
+    margin-top: 30px;
+    margin-right: 60px;
+    z-index: 0;
+}
+#play img{
+    width: 130%;
+    height: 130%;
+}
+#reset{
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    right: 0px;
+    margin-top: 170px;
+    margin-right: 60px;
+    z-index: 0;
+}
+#reset img{
+    width: 130%;
+    height: 130%;
+}
+#help{
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    right: 0px;
+    margin-top: 310px;
+    margin-right: 60px;
+    z-index: 0;
+}
+#help img{
+    width: 130%;
+    height: 130%;
 }
 .a,.b,.c{
     display:inline-block;
@@ -37,7 +76,7 @@ body,html{
     height: 115%;
 }
 .luna{
-    height:60%;
+    height:50%;
     width:100%;
     position:fixed;
     bottom:0px;
@@ -48,7 +87,7 @@ body,html{
 }
 .luna img{
     width: 100%;
-    height: 100%;
+    height: 112%;
 }
 #nave{
     text-align:center;
