@@ -13,6 +13,7 @@ var a = g; //la aceleración cambia cuando se enciende el motor de a=g a a=-g (s
 var velocidad = null;
 var altura = null;
 var combustible = null;
+var aterrizado = false;
 
 //al cargar por completo la página...
 window.onload = function(){
@@ -33,8 +34,7 @@ window.onload = function(){
 		document.getElementById("reset").onclick=function(){
 			reset();
 		};
-	
-	
+		
 	
 	//definición de eventos
 	//mostrar menú móvil
@@ -47,7 +47,6 @@ window.onload = function(){
 		document.getElementsByClassName("c")[0].style.display = "none";
 		start();
 	}
-	//encender/apagar el motor al hacer click en la pantalla
 	//encender/apagar al apretar/soltar una tecla
 	document.onkeydown = motorOn;
 	document.onkeyup = motorOff;
@@ -71,33 +70,47 @@ function moverNave(){
 	v +=a*dt;
 	y +=v*dt;
 	//actualizar marcadores
-	velocidad.innerHTML=v;
-	altura.innerHTML=y;
+	velocidad.innerHTML=v.toFixed(2);
+	altura.innerHTML=y.toFixed(2);
 	
 	//mover hasta que top sea un 70% de la pantalla
 	if (y<70){ 
 		document.getElementById("nave").style.top = y+"%"; 
 	} else { 
 		stop();
+                aterrizado = true;
+                
+                /*if (v<5){
+                   mostrarVictoria();
+                 }else{
+                   mostrarDerrota();
+                }
+                }*/
 	}
 }
 function motorOn(){
+        if (aterrizado == true || c==0){
+            motorOff();
 	//el motor da aceleración a la nave
-	a=-g;
+        }else{
+        a=-g;
 	//mientras el motor esté activado gasta combustible
 	if (timerFuel==null)
-	timerFuel=setInterval(function(){ actualizarFuel(); }, 10);	
+	timerFuel=setInterval(function(){ actualizarFuel(); }, 10);
+        document.getElementById("imgNave").src = "img/nave2.gif";
+        }
 }
 function motorOff(){
 	a=g;
 	clearInterval(timerFuel);
 	timerFuel=null;
+        document.getElementById("imgNave").src = "img/nave.png";
 }
 function actualizarFuel(){
 	//Restamos combustible hasta que se agota
 	c-=0.1;
 	if (c < 0 ) c = 0;
-	combustible.innerHTML=c;	
+        document.getElementById("fuel").style.width = c+"%";
 }
 function pause(){
 	stop();	
@@ -110,7 +123,6 @@ function play(){
 	document.getElementById("play").style.display = "inline-block";
 }
 function reset(){
-        stop();
         y = 10;
         v = 0;
         c = 100;
@@ -119,4 +131,6 @@ function reset(){
         dt = 0.016683;
         clearInterval(timer);
         start();
+        aterrizado = false;
+        document.getElementById("fuel").style.width = 100+"%";
 }
