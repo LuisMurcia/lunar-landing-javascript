@@ -45,16 +45,6 @@ window.onload = function(){
 		
 	
 	//definición de eventos
-	//mostrar menú móvil
-    	document.getElementById("showm").onclick = function () {
-		document.getElementsByClassName("c")[0].style.display = "block";
-		stop();
-	}
-	//ocultar menú móvil
-	document.getElementById("hidem").onclick = function () {
-		document.getElementsByClassName("c")[0].style.display = "none";
-		start();
-	}
 	//encender/apagar al apretar/soltar una tecla
 	document.onkeydown = motorOn;
 	document.onkeyup = motorOff;
@@ -81,6 +71,12 @@ function moverNave(){
 	velocidad.innerHTML=v.toFixed(2);
 	altura.innerHTML=y.toFixed(2);
 	
+        if (v>5){
+                document.getElementById("pVelocidad").style.background = "#FF471A"; 
+        }else{
+                document.getElementById("pVelocidad").style.background = "#66FF33"; 
+
+        }
 	//mover hasta que top sea un 70% de la pantalla
 	if (y<70){ 
 		document.getElementById("nave").style.top = y+"%"; 
