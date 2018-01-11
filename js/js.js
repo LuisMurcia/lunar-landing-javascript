@@ -34,6 +34,14 @@ window.onload = function(){
 		document.getElementById("reset").onclick=function(){
 			reset();
 		};
+        //Abrir instrucciones del juego
+                document.getElementById("help").onclick=function(){
+                        mostrarAyuda();
+                }
+        //Cerrar instrucciones del juego
+                document.getElementById("cerrar").onclick=function(){
+                        cerrarAyuda();
+                }
 		
 	
 	//definición de eventos
@@ -130,7 +138,21 @@ function reset(){
         g = 1.622;
         dt = 0.016683;
         clearInterval(timer);
-        start();
+        play();
         aterrizado = false;
         document.getElementById("fuel").style.width = 100+"%";
+}
+function mostrarAyuda(){
+        stop();
+        document.getElementById("ayuda").style.display = "block";
+        document.getElementById("play").style.display = "none";
+        document.getElementById("reset").style.display = "none";
+        document.getElementById("help").style.display = "none";
+}
+function cerrarAyuda(){
+        play();
+        document.getElementById("ayuda").style.display = "none";
+        document.getElementById("play").style.display = "inline-block";
+        document.getElementById("reset").style.display = "inline-block";
+        document.getElementById("help").style.display = "inline-block";
 }

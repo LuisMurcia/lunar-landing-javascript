@@ -17,6 +17,25 @@ body,html{
 .c{   
     display:block !important
 }
+#ayuda{
+    height:100%;
+    width:100%;
+    display: none;
+    margin: auto;
+    margin-top: 120px;
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+}
+#cerrar{
+    position: relative;
+    margin-top: -263px;
+    right: -260px
+}
+#cerrar img{
+    height:4%;
+    width:4%;   
+}
 .barra{
     background-color: white;
     border-style: solid;
@@ -164,9 +183,9 @@ body,html{
 #nave img{
     height:120%;
 }
-#cpanel{
-    
-}
 #hidem,#showm{
-    display:none
+    display:none;
+}
+#desplegable{
+    display: none;
 }
