@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Lunar Lander</title>
+        <link href="css/m.css" rel="stylesheet" type="text/css"/>
         <meta name="description" content="Página web Lunar Lander">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel='stylesheet' media='screen and (min-width: 961px)' href='css/d.css'>
@@ -21,14 +22,18 @@
                 <img src="img/tierra.png" alt="img tierra">
             </div>
             <div id="cpanel">
-                <div id="pVelocidad">VELOCIDAD: <span id="velocidad">100</span> m/s</div>
-                <div id="pAltura">ALTURA: <span id="altura">70</span> m</div>
+                <div id="pVelocidad">VELOCIDAD: <br><span id="velocidad">100</span> m/s</div>
+                <div id="pAltura">ALTURA: <br><span id="altura">70 </span> m</div>
             </div>
         </div>
         <div class="c">
-            <div id="menu">
-                <div id="desplegable">
-                    <a href="Desplegable.html"></a>
+                <div class="desplegable">
+                    <button class="menu"><img src="img/B_M.png" alt="img desplegable"></button>
+                    <div class="opciones">
+                        <div id="playM">Play</div>
+                        <div id="resetM">Reset</div>
+                        <div id="helpM">Help</div>
+                    </div>
                 </div>
                 <div id="play">
                     <img src="img/B_PA.png" alt="img play">
@@ -43,13 +48,12 @@
                     <img src="img/B_I.png" alt="img reset">
                 </div>
             </div>
-        </div>
-            <div class="luna">
-                <img src="img/luna.png" alt="img luna">
-                <div class="barra">
-                    <div id="fuel"> </div>
-                </div>
+        <div class="luna">
+            <img src="img/luna.png" alt="img luna">
+            <div class="barra">
+                <div id="fuel"> </div>
             </div>
+        </div>
         <div id="ayuda">
             <img src="img/instrucciones.png" alt="img instrucciones">
             <div id="cerrar"> <img src="img/cerrarVentana.png" alt="img cerrarVentana">

@@ -25,15 +25,15 @@ window.onload = function(){
 	//Pausar el juego
 		document.getElementById("play").onclick=function(){
 			pause();
-			};
+			}
 	//Retomar el juego
 		document.getElementById("pause").onclick=function(){
 			play();
-		};
+		}
 	//Reiniciar el juego
 		document.getElementById("reset").onclick=function(){
 			reset();
-		};
+		}
         //Abrir instrucciones del juego
                 document.getElementById("help").onclick=function(){
                         mostrarAyuda();
@@ -42,6 +42,7 @@ window.onload = function(){
                 document.getElementById("cerrar").onclick=function(){
                         cerrarAyuda();
                 }
+        //Abrir desplegable
 		
 	
 	//definiciÃ³n de eventos
@@ -140,6 +141,7 @@ function reset(){
 }
 function mostrarAyuda(){
         stop();
+        aterrizado = true; //para que no sea posible gastar combustible mientras esté abierta la ventana de instrucciones
         document.getElementById("ayuda").style.display = "block";
         document.getElementById("play").style.display = "none";
         document.getElementById("reset").style.display = "none";
@@ -151,4 +153,5 @@ function cerrarAyuda(){
         document.getElementById("play").style.display = "inline-block";
         document.getElementById("reset").style.display = "inline-block";
         document.getElementById("help").style.display = "inline-block";
+        aterrizado = false;
 }
