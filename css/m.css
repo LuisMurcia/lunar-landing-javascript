@@ -172,7 +172,6 @@ body,html{
     padding:12px;
     border:none;
     background-color: transparent;
-    position: fixed;
     margin-top: -152%;
     margin-left: -2%;
 }
