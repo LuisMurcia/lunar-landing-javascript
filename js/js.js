@@ -18,6 +18,13 @@ var aterrizado = false;
 //al cargar por completo la pÃ¡gina...
 window.onload = function () {
 
+    function is_touch_device() {
+        if ('ontouchstart' in window) {
+            document.getElementById("press").style.display = "inline-block";
+        }
+    }
+    is_touch_device();
+
     velocidad = document.getElementById("velocidad");
     altura = document.getElementById("altura");
     combustible = document.getElementById("fuel");
@@ -279,9 +286,9 @@ function cerrarDerrotaM() {
     document.getElementById("menu").style.display = "block";
 }
 //para realizar el botón de versión móvil
-    var botonM = document.getElementById("press");
-    botonM.addEventListener("touchstart", pulsar, false);
-    botonM.addEventListener("touchend", soltar, false);
+var botonM = document.getElementById("press");
+botonM.addEventListener("touchstart", pulsar, false);
+botonM.addEventListener("touchend", soltar, false);
 function pulsar(event) {
     motorOn();
 }
