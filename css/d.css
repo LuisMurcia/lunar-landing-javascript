@@ -215,7 +215,7 @@ body,html{
 #nave img{
     height:120%;
 }
-.desplegable{
+#desplegable{
     display: none;
 }
 #cerrar1M, #cerrar2M, #cerrarAM, #press{
