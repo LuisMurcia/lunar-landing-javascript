@@ -164,9 +164,6 @@ body,html{
 #explosion img{
     width: 50%;
 }
-#desplegable{
-    position: fixed;
-}
 #desplegable img{
     width: 40%;
     margin-left: 102%;
