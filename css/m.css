@@ -45,7 +45,7 @@ body,html{
     width:28.5%;
     height: 20px;
     position:fixed;
-    bottom:12px;
+    bottom:25px;
     left: 0px;
     right:0px;
     margin:0 auto;
@@ -84,6 +84,7 @@ body,html{
     font-weight: bold;
     padding-bottom: 2%;
     padding-top: 2%;
+    font: oblique bold 110% cursive;
 }
 #pAltura{
     text-align: center;
@@ -101,6 +102,7 @@ body,html{
     font-weight: bold;
     padding-bottom: 2%;
     padding-top: 2%;
+    font: oblique bold 110% cursive;
 }
 #nave{
     text-align:center;
@@ -112,54 +114,97 @@ body,html{
 #nave img{
     height:110%;
 }
-#ayuda{
-    height:100%;
-    width:100%;
-    display: none;
-    margin: auto;
-    margin-top: 120px;
+#final1,#final2,#ayuda{
+    position: absolute;
     text-align: center;
-    position: fixed;
+    display: none;
+    width: 87%;
+    margin-top: 50%;
+    margin-left: 7%;
     z-index: 1;
 }
-#cerrar{
-    position: relative;
-    margin-top: -263px;
-    right: -260px
-}
-#cerrar img{
-    height:4%;
-    width:4%;   
-}
-#play,#reset,#help,#pause{
+#ayuda{
+    margin-top: 45%;
+    margin-left: 12%;
+    width: 78%;
     display: none;
 }
-.menu{
+#titulo1,#titulo2,#tituloA{
+    background-color: rgb(0, 213, 249);
+    font: oblique bold 100% cursive;
+    color: black;
+}
+#parrafo1,#parrafo2,#parrafoA{
+    background-color: rgb(193, 255, 0);
+    padding-bottom: 1%;
+    font: oblique bold 80% cursive;
+    color: rgb(230, 40, 12);
+}
+#cerrar1M,#cerrar2M,#cerrarAM{
+    font: oblique bold 100% cursive;
+    background-color: #00b300;
+    border-color: black;
+}
+#cerrar1M:hover,#cerrar2M:hover,#cerrarAM:hover{
+    transform: scale(1.2,1.2);
+    transition-duration: 0.15;
+    background-color: #00ff00;
+}
+#celebracion{
+    display: none;
+    margin-top: -47%;
+}
+#celebracion img{
+    width: 50%;
+}
+#explosion{
+    display: none;
+    margin-top: -41%;
+}
+#explosion img{
+    width: 50%;
+}
+#desplegable img{
+    width: 40%;
+    margin-left: 102%;
+}
+#menu{
     padding:12px;
     border:none;
     background-color: transparent;
+    position: fixed;
+    margin-top: -152%;
+    margin-left: -2%;
 }
-.opciones{
+#opciones{
     display: none;
     list-style: none;
-    margin: -10px;
     left: 15px;
     position: absolute;
     background-color: #7FFF00;
-    min-width: 110px;
+    min-width: 166px;
     z-index: 0;
-    color:black;
-    font-weight:bold;
-    font-size: 150%;
+    color: black;
     text-align: center;
+    font: oblique bold 240% cursive;
     padding: 12px 16px;
+    margin-left: 22%;
+    margin-top: -98%;
 }
 #playM:hover,#resetM:hover,#helpM:hover{
     background-color: yellow;
 }
-.desplegable:hover .opciones{
-    display: block;
-}
-.desplegable:hover .menu{
+#desplegable img:hover{
     background-color: transparent;
+    transform: scale(1.15,1.15);
+    transition-duration: 0.15;
+}
+#press{
+    background-color: #ff3300;
+    font: oblique bold 120% cursive;
+    margin-top: 145%;
+    margin-left: 75%;
+}
+#play,#reset,#help,#pause,#cerrar1, #cerrar2, #cerrarA{
+    display: none;
 }

@@ -11,11 +11,58 @@
     </head>
 
     <body>
-        <div id="nave">
-            <img id = "imgNave" src="img/nave.png" alt="img nave">
-        </div>
         <div id="fondo">
             <img src="img/fondo.jpg" alt="img fondo">
+        </div>
+        <div id="nave">
+            <img id = "imgNave" src="img/nave.png" alt="img nave">
+            <div id="explosion">
+                <img src="img/explosion1.gif" alt="img explosion">
+            </div>
+            <div id="celebracion">
+                <img src="img/celebracion.gif" alt="img celebracion">
+            </div>
+        </div>
+        <div id="final1">
+            <div id="parrafo1">
+                <div id="titulo1">
+                    <h1>¡¡¡Enhorabuena!!!</h1>
+                </div>
+                <p>
+                    ¡Estás hecho un astronauta de primera!<br>La NASA no se equivocaba contigo.                   
+                </p>
+                <button id = "cerrar1">Volver a jugar</button>
+                <button id ="cerrar1M">Volver a jugar</button>
+            </div>
+        </div>
+        <div id="final2">
+            <div id="parrafo2">
+                <div id="titulo2">
+                    <h1>Game Over...</h1>
+                </div>
+                <p>
+                    ¡La velocidad de la nave no debe superar los 5 m/s!<br>Sigue intentándolo.                
+                </p>
+                <button id = "cerrar2">Volver a jugar</button>
+                <button id ="cerrar2M">Volver a jugar</button>
+            </div>>
+        </div>
+        <div id="ayuda">
+            <div id="parrafoA">
+                <div id="tituloA">
+                    <h1>Objetivo e instrucciones</h1>
+                </div>
+                <p>
+                    El objetivo de este juego es conseguir que la nave aterrice en la Luna a una 
+                    velocidad inferior a los 5 m/s, de no ser así, la nave explotará. Para lograrlo, 
+                    el jugador deberá hacer uso del motor para ir frenando la caída de la nave pulsando 
+                    cualquier tecla o, en la versión para móviles, el botón de ON.<br>
+                    ¡Pero alerta! El combustible se va agotando a medida que lo empleas, como bien 
+                    indica la barra de abajo, así que empléalo con cautela...... ¡¡Buena suerte!! 
+                </p>
+                <button id = "cerrarA">Continuar la partida</button>
+                <button id="cerrarAM">Continuar la partida</button>
+            </div>>
         </div>
         <div class="a">
             <div id="tierra">
@@ -26,37 +73,35 @@
                 <div id="pAltura">ALTURA: <br><span id="altura">70 </span> m</div>
             </div>
         </div>
+        <div class="ON">
+            <button id="press">ON</button>
+        </div>
         <div class="c">
-                <div class="desplegable">
-                    <button class="menu"><img src="img/B_M.png" alt="img desplegable"></button>
-                    <div class="opciones">
-                        <div id="playM">Play</div>
-                        <div id="resetM">Reset</div>
-                        <div id="helpM">Help</div>
-                    </div>
-                </div>
-                <div id="play">
-                    <img src="img/B_PA.png" alt="img play">
-                </div>
-                <div id="pause">
-                    <img src="img/B_P.png" alt="img pause">
-                </div>
-                <div id="reset">
-                    <img src="img/B_R.png" alt="img reset">
-                </div>
-                <div id="help">
-                    <img src="img/B_I.png" alt="img reset">
+            <div id="desplegable">
+                <button id="menu"><img src="img/B_M.png" alt="img desplegable"></button>
+                <div id="opciones">
+                    <div id="playM">Play</div>
+                    <div id="resetM">Reset</div>
+                    <div id="helpM">Help</div>
                 </div>
             </div>
+            <div id="play">
+                <img src="img/B_PA.png" alt="img play">
+            </div>
+            <div id="pause">
+                <img src="img/B_P.png" alt="img pause">
+            </div>
+            <div id="reset">
+                <img src="img/B_R.png" alt="img reset">
+            </div>
+            <div id="help">
+                <img src="img/B_I.png" alt="img reset">
+            </div>
+        </div>
         <div class="luna">
             <img src="img/luna.png" alt="img luna">
             <div class="barra">
                 <div id="fuel"> </div>
-            </div>
-        </div>
-        <div id="ayuda">
-            <img src="img/instrucciones.png" alt="img instrucciones">
-            <div id="cerrar"> <img src="img/cerrarVentana.png" alt="img cerrarVentana">
             </div>
         </div>
     </body>
