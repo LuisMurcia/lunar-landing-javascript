@@ -18,6 +18,24 @@ var aterrizado = false;
 //al cargar por completo la pÃ¡gina...
 window.onload = function () {
 
+    //para realizar el botón de versión móvil
+    function tocarBoton() {
+        if ('ontouchstart' in window) {
+            document.getElementById("press").style.display = "inline-block";
+        }
+    }
+    tocarBoton();
+    var botonM = document.getElementById("press");
+    botonM.addEventListener("touchstart", pulsar, false);
+    botonM.addEventListener("touchend", soltar, false);
+    function pulsar(event) {
+        motorOn();
+    }
+    function soltar(event) {
+        motorOff();
+    }
+
+
     velocidad = document.getElementById("velocidad");
     altura = document.getElementById("altura");
     combustible = document.getElementById("fuel");
@@ -277,14 +295,4 @@ function cerrarDerrotaM() {
     document.getElementById("explosion").style.display = "none";
     document.getElementById("play").style.display = "none"; //si no lo devolvemos a "none", al hacer reset se activa la función "play" y la id pasa a "display: inline-block"
     document.getElementById("menu").style.display = "block";
-}
-//para realizar el botón de versión móvil
-    var botonM = document.getElementById("press");
-    botonM.addEventListener("touchstart", pulsar, false);
-    botonM.addEventListener("touchend", soltar, false);
-function pulsar(event) {
-    motorOn();
-}
-function soltar(event) {
-    motorOff();
 }

@@ -175,6 +175,7 @@ body,html{
     position: fixed;
     margin-top: -152%;
     margin-left: -2%;
+    position: fixed;
 }
 #opciones{
     display: none;
@@ -202,8 +203,15 @@ body,html{
 #press{
     background-color: #ff3300;
     font: oblique bold 120% cursive;
-    margin-top: 145%;
-    margin-left: 75%;
+    margin-top: 138%;
+    margin-left: 72.5%;
+    padding: 4%;
+    border-color: black;
+}
+#press:hover{
+    background-color: #ffa31a;
+    transform: scale(1.2,1.2);
+    transition-duration: 0.15;
 }
 #play,#reset,#help,#pause,#cerrar1, #cerrar2, #cerrarA{
     display: none;
