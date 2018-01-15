@@ -18,12 +18,17 @@ var aterrizado = false;
 //al cargar por completo la pÃ¡gina...
 window.onload = function () {
 
+<<<<<<< HEAD
     //para realizar el botón de versión móvil
     function tocarBoton() {
+=======
+    function is_touch_device() {
+>>>>>>> 96972853aed6dd2210a05aa55166e394ef917e11
         if ('ontouchstart' in window) {
             document.getElementById("press").style.display = "inline-block";
         }
     }
+<<<<<<< HEAD
     tocarBoton();
     var botonM = document.getElementById("press");
     botonM.addEventListener("touchstart", pulsar, false);
@@ -35,6 +40,9 @@ window.onload = function () {
         motorOff();
     }
 
+=======
+    is_touch_device();
+>>>>>>> 96972853aed6dd2210a05aa55166e394ef917e11
 
     velocidad = document.getElementById("velocidad");
     altura = document.getElementById("altura");
@@ -296,3 +304,16 @@ function cerrarDerrotaM() {
     document.getElementById("play").style.display = "none"; //si no lo devolvemos a "none", al hacer reset se activa la función "play" y la id pasa a "display: inline-block"
     document.getElementById("menu").style.display = "block";
 }
+<<<<<<< HEAD
+=======
+//para realizar el botón de versión móvil
+var botonM = document.getElementById("press");
+botonM.addEventListener("touchstart", pulsar, false);
+botonM.addEventListener("touchend", soltar, false);
+function pulsar(event) {
+    motorOn();
+}
+function soltar(event) {
+    motorOff();
+}
+>>>>>>> 96972853aed6dd2210a05aa55166e394ef917e11
