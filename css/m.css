@@ -172,10 +172,8 @@ body,html{
     padding:12px;
     border:none;
     background-color: transparent;
-    position: fixed;
     margin-top: -152%;
     margin-left: -2%;
-    position: fixed;
 }
 #opciones{
     display: none;
@@ -190,7 +188,7 @@ body,html{
     font: oblique bold 240% cursive;
     padding: 12px 16px;
     margin-left: 22%;
-    margin-top: -98%;
+    margin-top: -97%;
 }
 #playM:hover,#resetM:hover,#helpM:hover{
     background-color: yellow;
