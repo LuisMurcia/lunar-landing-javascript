@@ -1,7 +1,7 @@
 # Lunar lander con html, css y javascript
-Versión final Lunar Lander incluido en ella el Javascript
+Versión final Lunar Lander incluido en ella el Javascript.
 **¡Pruébalo!:**
-*
+* https://rawgit.com/LuisMurcia/lunar-landing-javascript/master/index.html
 
 **Documentación:**
 * La página web se adapta a todo tipo de dispositivos (es responsive).
@@ -24,5 +24,3 @@ Versión final Lunar Lander incluido en ella el Javascript
 * Botón táctil para dispositivos móviles: funciona al igual que la pulsación de un tecla de la computadora; cuando se deja de clickar el motor se apaga el motor y comienza la desaceleración.
 * Cada vez que se pase de un dispositivo de resolución móvil a uno de resolución de pantalla completa, se debe reiniciar el juego porque si no pueden darse diferentes tipos de *bugs*.
 * Todas las imágenes han sido comprimidas.
-**Validación**
-* 
